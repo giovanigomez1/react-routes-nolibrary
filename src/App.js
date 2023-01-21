@@ -1,25 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import Accordion from "./components/Accordion"
+import Route from "./components/Route"
 
-function App() {
+import Header from "./components/Header"
+
+
+
+const items = [
+  {
+    title: 'What is React 1?',
+    content: '1 React is a front end javascript framework'
+  },
+  {
+    title: 'What is React 2?',
+    content: '2 React is a front end javascript framework'
+  },
+  {
+    title: 'What is React 3?',
+    content: '3 React is a front end javascript framework'
+  }
+]
+
+
+
+function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      
+      <Route path="/">
+        <h2>Welcome</h2>
+      </Route>
+      <Route path="/accordion">
+        <Accordion items={items}/>
+      </Route>
+      <Route path="/about">
+        <p>This is a very single component to show how to use custom routing navigation without using libraries like React-Router</p>
+        <p>React-Router is very easy to use but it frecuently has breaking changes that causes to break projects already on production </p>
+      </Route>
+      
+
     </div>
-  );
+  )
 }
 
-export default App;
+
+export default App
+
+
