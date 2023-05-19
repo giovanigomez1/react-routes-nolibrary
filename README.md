@@ -1,6 +1,6 @@
 # React Routes with context api
 
-This project was created without react-router-dom
+This project is an example on how to use custom routing navigation without using libraries like React-Router-Dom
 
 # Getting Started with Create React App
 
